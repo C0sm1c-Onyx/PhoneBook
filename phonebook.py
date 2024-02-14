@@ -14,7 +14,7 @@ class PhoneBook:
         try:
             entrie = self.directory[number_entrie]
             for key in entrie:
-                entry = input(f'{key.title()} (Нажмите Enter, чтобы оставить без измемений): ')
+                entry = input(f'{key.title()} (Нажмите Enter, чтобы оставить без изменений): ')
                 if entry:
                     entrie[key] = entry
 
