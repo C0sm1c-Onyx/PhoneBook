@@ -83,14 +83,14 @@ def get_data() -> [list, None]:
     except FileNotFoundError:
         return None
         
-
-pb = PhoneBook()
-COMMANDS = {'1': pb.view_entries, '2': pb.add_entrie, '3': pb.edit_entrie, '4': pb.search_entries}
-
-while True:
-    action = input("\nВыберите действие:\nВывод записей из справочника - 1\nДобавление новой записи в справочник - 2\nРедактирование записи - 3\nПоиск записей - 4\nДля выхода нажмите Enter\n")
-    if action not in COMMANDS:
-        break
-
-    print()
-    COMMANDS[action]()
+if __name__ == '__main__':
+    pb = PhoneBook()
+    COMMANDS = {'1': pb.view_entries, '2': pb.add_entrie, '3': pb.edit_entrie, '4': pb.search_entries}
+    
+    while True:
+        action = input("\nВыберите действие:\nВывод записей из справочника - 1\nДобавление новой записи в справочник - 2\nРедактирование записи - 3\nПоиск записей - 4\nДля выхода нажмите Enter\n")
+        if action not in COMMANDS:
+            break
+    
+        print()
+        COMMANDS[action]()
